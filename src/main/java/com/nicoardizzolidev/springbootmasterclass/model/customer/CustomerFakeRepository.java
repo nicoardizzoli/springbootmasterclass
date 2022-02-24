@@ -14,6 +14,11 @@ public class CustomerFakeRepository implements CustomerRepo {
 
     @Override
     public List<Customer> getCustomers() {
-        return Arrays.asList(new Customer(1L, "Nicolas", "123123"), new Customer(2L, "Roberto", "123"));
+        return Arrays.asList(new Customer(1L, "Nicolas", "123123", "email@gmail.com"), new Customer(2L, "Roberto", "123","email@gmail.com"));
+    }
+
+    @Override
+    public Customer getCustomer(Long id) {
+        return null;
     }
 }

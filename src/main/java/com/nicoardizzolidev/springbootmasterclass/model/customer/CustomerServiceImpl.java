@@ -1,6 +1,9 @@
 package com.nicoardizzolidev.springbootmasterclass.model.customer;
 
+import com.nicoardizzolidev.springbootmasterclass.exceptions.NotFoundException;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,15 +13,23 @@ import java.util.List;
 @AllArgsConstructor
 public class CustomerServiceImpl implements CustomerService{
 
-    private CustomerRepo customerRepo;
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
+
+    private CustomerRepository customerRepository;
 
     @Override
-    public Customer getCustomer() {
-        return new Customer(1L, "nico", "123");
+    public Customer getCustomer(Long id) {
+
+        LOGGER.info("getcustomers was called");
+        return customerRepository.findById(id).orElseThrow(() ->
+        {
+            LOGGER.error("No se encuentra el customer " + id);
+            throw new NotFoundException("customer not found");
+        });
     }
 
     @Override
     public List<Customer> getCustomers() {
-        return customerRepo.getCustomers();
+        return customerRepository.findAll();
     }
 }

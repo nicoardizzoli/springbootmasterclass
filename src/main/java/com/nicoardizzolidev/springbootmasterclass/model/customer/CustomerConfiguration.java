@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class CustomerConfiguration {
 
     //con esto se puede leer una variable del application.properties
-    @Value("${app.useFakeCustomerRepo : true}")
+    @Value("${app.useFakeCustomerRepo : false}")
     private Boolean useFakeCustomerRepo;
 
     //SI SE ANOTA ALGO COMO BEAN, SPRING LO VA A EJECUTAR EN EL INICIO DEL SERVIDOR.
@@ -20,9 +20,9 @@ public class CustomerConfiguration {
         };
     }
 
-    @Bean
-    CustomerRepo customerRepo() {
-        System.out.println("use fake customer = " + useFakeCustomerRepo);
-        return useFakeCustomerRepo ? new CustomerFakeRepository() : new CustomerRepository();
-    }
+//    @Bean
+//    CustomerRepo customerRepo() {
+//        System.out.println("use fake customer = " + useFakeCustomerRepo);
+//        return useFakeCustomerRepo ? new CustomerFakeRepository() : new CustomerRepository();
+//    }
 }

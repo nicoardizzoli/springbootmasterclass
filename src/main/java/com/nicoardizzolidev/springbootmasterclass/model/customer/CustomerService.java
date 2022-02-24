@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface CustomerService {
 
-    Customer getCustomer();
+    Customer getCustomer(Long id);
     List<Customer> getCustomers();
 }

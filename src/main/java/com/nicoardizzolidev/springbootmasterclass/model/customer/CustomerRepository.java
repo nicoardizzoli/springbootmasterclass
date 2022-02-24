@@ -1,16 +1,10 @@
 package com.nicoardizzolidev.springbootmasterclass.model.customer;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collections;
-import java.util.List;
-
 @Repository(value = "real")
-public class CustomerRepository implements CustomerRepo {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-    @Override
-    public List<Customer> getCustomers() {
-        // TODO conectar a la database real.
-        return Collections.emptyList();
-    }
+
 }

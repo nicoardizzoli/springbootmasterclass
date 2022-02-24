@@ -6,4 +6,5 @@ public interface CustomerRepo {
 
     List<Customer> getCustomers();
 
+    Customer getCustomer(Long id);
 }
