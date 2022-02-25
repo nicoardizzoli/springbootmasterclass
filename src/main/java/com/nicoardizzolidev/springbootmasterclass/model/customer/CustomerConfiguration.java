@@ -12,11 +12,19 @@ public class CustomerConfiguration {
     @Value("${app.useFakeCustomerRepo : false}")
     private Boolean useFakeCustomerRepo;
 
+
+    //asi se lee una variable del application.properties (las unicas q pueden sobreescribir una propiedad, son variablers de la jvm o de entorno)
+    //Tambien se puede ller con enviroment.getProperty("info.company.name")
+    @Value("${info.company.name}")
+    private String companyName;
+
+
     //SI SE ANOTA ALGO COMO BEAN, SPRING LO VA A EJECUTAR EN EL INICIO DEL SERVIDOR.
     @Bean
     CommandLineRunner commandLineRunner() {
         return args -> {
             System.out.println("Command line runner hellooo");
+            System.out.println(companyName);
         };
     }
 
