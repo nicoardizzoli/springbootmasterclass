@@ -1,7 +1,8 @@
 # SpringBoot Master Class
 
 
-[certificate-of-completion-for-spring-boot-master-class.pdf](https://github.com/nicoardizzoli/spring-data-jpa-course/files/8142258/certificate-of-completion-for-spring-boot-master-class.pdf)
+![image](https://user-images.githubusercontent.com/90424996/155741730-d2fb9a33-3d52-44cc-b39e-7802a332cf78.png)
+
 
 
 ## TOPICS
