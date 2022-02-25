@@ -8,7 +8,6 @@
 ## TOPICS
 
 - Restful API's
-- Logging
 - N Tier Architecture
 - Spring Boot Actuator
 - Dependency Injection
@@ -20,6 +19,11 @@
 - Exception Handling
 - Lombok
 - Running Spring Boot Applications
-
+- JPA
+- application.properties and aplication.yml
+- SpringBoot Profiles (dev-staging-prod)
+- H2 database
+- Logging (Slf4j)
+- Best practices
 
 ![image](https://user-images.githubusercontent.com/90424996/155741605-69fa2c90-f154-49bc-b171-015d717c1670.png)
